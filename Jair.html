@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>><style>
+    body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #1a1a1a; /* Color de fondo oscuro */
+}
+
+.container {
+  text-align: center;
+}
+
+.nombre {
+  font-family: 'Arial', sans-serif;
+  font-size: 3em;
+  color: #ff00ff; /* Color llamativo (rosa) */
+  text-transform: uppercase;
+  text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* Sombra y efecto de brillo */
+  animation: bounce 1s infinite alternate;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+</style>
+  <title>Mi Nombres</title>
+  <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="nombre">Jair Sánchez</h1>
+  </div>
+</body>
+</html>
