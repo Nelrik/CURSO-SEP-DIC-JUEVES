@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Texto con Luces de Fondo, Movimiento, Fundido y Lluvia de Estrellas</title>
+    <style>
+        body {
+            background-color: #000; /* Color de fondo negro */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            overflow: hidden; /* Evita que el contenido se desborde */
+        }
+
+        .texto-luces {
+            font-size: 200px; /* Tamaño del texto */
+            color: rgb(231, 64, 176); /* Color del texto */
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(2, 255, 150, 0.8), 0 0 30px rgba(255, 255, 255, 0.8); /* Sombras para simular luces de fondo */
+            animation: luces 2s linear infinite, movimiento 5s linear infinite, fundido 5s ease-in-out infinite, destellos 2s ease infinite; /* Animaciones de luces de fondo, movimiento, fundido y destellos */
+        }
+
+        
+
+        .estrella {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background-color: #fff; /* Color de las estrellas */
+            animation: caerEstrella 5s linear infinite; /* Animación de caída de estrellas */
+        }
+
+        @keyframes luces {
+            0% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+            }
+            50% {
+                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
+            }
+            100% {
+                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
+            }
+        }
+
+        @keyframes movimiento {
+            0% {
+                transform: translate(0, 0); /* Sin movimiento */
+            }
+            25% {
+                transform: translate(20px, 20px); /* Movimiento hacia la derecha y abajo */
+            }
+            50% {
+                transform: translate(0, 0); /* Sin movimiento */
+            }
+            75% {
+                transform: translate(-20px, -20px); /* Movimiento hacia la izquierda y arriba */
+            }
+            100% {
+                transform: translate(0, 0); /* Sin movimiento */
+            }
+        }
+
+        @keyframes fundido {
+            0% {
+                opacity: 1; /* Texto completamente visible */
+            }
+            25% {
+                opacity: 0.75; /* Texto con 75% de opacidad */
+            }
+            50% {
+                opacity: 0.5; /* Texto con 50% de opacidad */
+            }
+            75% {
+                opacity: 0.25; /* Texto con 25% de opacidad */
+            }
+            100% {
+                opacity: 1; /* Texto completamente visible */
+            }
+        }
+
+        @keyframes destellos {
+            0%, 100% {
+                color: rgb(231, 64, 176); /* Color del texto */
+            }
+            25% {
+                color: rgb(255, 0, 0); /* Color rojo */
+            }
+            50% {
+                color: rgb(0, 255, 0); /* Color verde */
+            }
+            75% {
+                color: rgb(0, 0, 255); /* Color azul */
+            }
+        }
+
+        
+
+        @keyframes caerEstrella {
+            0% {
+                transform: translateY(-10px) translateX(0); /* Estrellas en la parte superior */
+            }
+            100% {
+                transform: translateY(100vh) translateX(20px); /* Estrellas en la parte inferior con movimiento diagonal */
+            }
+        }
+
+        @keyframes lluviaEstrellas {
+            0% {
+                transform: translateY(0) translateX(0); /* Sin movimiento */
+                opacity: 0; /* Estrellas no visibles al principio */
+            }
+            100% {
+                transform: translateY(100vh) translateX(20px); /* Estrellas en la parte inferior con movimiento diagonal */
+                opacity: 1; /* Estrellas completamente visibles al final */
+            }
+        }
+        @keyframes lluviaEstrellas {
+            0% {
+                transform: translateY(0) translateX(0); /* Sin movimiento */
+                opacity: 0; /* Estrellas no visibles al principio */
+            }
+            100% {
+                transform: translateY(100vh) translateX(20px); /* Estrellas en la parte inferior con movimiento diagonal */
+                opacity: 1; /* Estrellas completamente visibles al final */
+            }
+        }
+        /* Aplicamos la animación de lluvia de estrellas a múltiples estrellas */
+        .estrella:nth-child(1) {
+            animation: lluviaEstrellas 6s linear infinite; /* Cambia la duración de la animación si es necesario */
+        }
+        .estrella:nth-child(2) {
+            animation: lluviaEstrellas 5s linear infinite; /* Cambia la duración de la animación si es necesario */
+        }
+        .estrella:nth-child(3) {
+            animation: lluviaEstrellas 4s linear infinite; /* Cambia la duración de la animación si es necesario */
+        }
+        /* Puedes agregar más estrellas con estilos de animación personalizados si lo deseas */
+    </style>
+</head>
+<body>
+    <div class="texto-luces">Ciglady</div>
+    <!-- Figuritas -->
+    <div class="figurita"></div>
+    <div class="figurita"></div>
+    <div class="figurita"></div>
+    <!-- Lluvia de Estrellas -->
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <div class="estrella"></div>
+    <!-- Agrega más estrellas si lo deseas -->
+</body>
+</html>
