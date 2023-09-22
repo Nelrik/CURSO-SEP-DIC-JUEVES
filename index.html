@@ -1,40 +1,54 @@
 <!DOCTYPE html>
-<html lang="es">
+<!--[if lte IE 9]>
+<html lang="en" class="oldie">
+<![endif]-->
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texto con Luces de Fondo</title>
-    <style>
-        body {
-            background-color: #000; /* Color de fondo negro */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pure CSS Animated Background</title>
+  <link rel="stylesheet" media="all" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
 
-        .texto-luces {
-            font-size: 72px; /* Tamaño del texto */
-            color: white; /* Color del texto */
-            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8); /* Sombras para simular luces de fondo */
-            animation: luces 2s linear infinite; /* Animación de luces de fondo */
-        }
+    .context {
+      text-align: center;
+    }
 
-        @keyframes luces {
-            0% {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
-            }
-            50% {
-                text-shadow: 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8), 0 0 40px rgba(255, 255, 255, 0.8);
-            }
-            100% {
-                text-shadow: 0 0 10px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.8), 0 0 30px rgba(255, 255, 255, 0.8);
-            }
-        }
-    </style>
+    .context img {
+      display: block;
+      margin: 0 auto; /* Esto centrará la imagen horizontalmente */
+    }
+  </style>
 </head>
 <body>
-    <div class="texto-luces">Majo</div>
+  <div class="context">
+    <h1>María José</h1>
+    <img src="images/im.jpeg" alt="Mi imagen" />
+  </div>
+
+  <div class="area">
+    <ul class="circles">
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul>
+  </div>
 </body>
 </html>
